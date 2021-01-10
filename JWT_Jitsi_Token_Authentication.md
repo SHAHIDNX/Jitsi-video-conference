@@ -1,9 +1,10 @@
-# Following is the procedure to install Jitsi with JWT authentications. I have used Ubuntu 18.4 bionic, recommendation is try it in a new machine.
+# Procedure to install Jitsi with JWT authentications. I have used Ubuntu 18.4 bionic, recommendation is try it in a new machine.
 
-**1. Update ubuntu packages after fresh installation.
-  $sudo apt update
+**1. Update ubuntu packages after fresh installation.**
+ 
+    $sudo apt update
 
-**2. Setup hostname  
+**2. Setup hostname  **
     sudo hostnamectl set-hostname meet
   
   add the same name in /etc/hosts
@@ -64,7 +65,7 @@
         apt-get install jitsi-meet -y &&
         apt-get install jitsi-meet-tokens -y
     
-   9. Extra configuratons in /etc/prosody/prosody.cfg.lua .
+  **9. Extra configuratons in /etc/prosody/prosody.cfg.lua** .
       Open /etc/prosody/prosody.cfg.lua and set following flag to false.
    
               c2s_require_encryption=false
@@ -78,11 +79,11 @@
         
    Note: Second value can be anything but should be matching with aud and iss paramter inside jwt.
      
-   10. Restart jitsi services.
+   **10. Restart jitsi services.**
      
            systemctl restart prosody jicofo jitsi-videobridge2 jigasi
           
-   11. Forming JWT token
+   **11. Forming JWT token**
         Go to https://jwt.io/#debugger-io website in brower.
         add following json content in Header part
          
@@ -110,7 +111,7 @@
     
   Enter your secret key at secret key column at bottom right corner field
     
- 12. Final Step. Copy the Encrypted hash content , form a URL in below format and paste in browser , enter :)
+ **12. Final Step. Copy the Encrypted hash content , form a URL in below format and paste in browser , enter :)**
         https://meet.example.org/angrywhalesgrowhigh?jwt=<Token>
         Exampe : 
   
