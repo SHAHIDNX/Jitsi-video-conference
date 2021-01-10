@@ -4,7 +4,8 @@
  
     $sudo apt update
 
-**2. Setup hostname  **
+**2. Setup hostname**
+
     sudo hostnamectl set-hostname meet
   
   add the same name in /etc/hosts
