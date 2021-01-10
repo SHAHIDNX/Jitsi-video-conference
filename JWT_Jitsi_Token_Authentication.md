@@ -61,12 +61,12 @@
          
    **8. Install Jitsi and Jitsi jwt plugi**
     
-    apt-get install nginx 
         wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add - &&
         sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list" &&
-        apt-get -y update &&
-        apt-get install jitsi-meet -y &&
-        apt-get install jitsi-meet-tokens -y
+        apt-get -y update
+        
+        apt-get install jitsi-meet  
+        apt-get install jitsi-meet-tokens 
     
   **9. Extra configuratons in /etc/prosody/prosody.cfg.lua** .
       Open /etc/prosody/prosody.cfg.lua and set following flag to false.
@@ -87,14 +87,15 @@
            systemctl restart prosody jicofo jitsi-videobridge2 jigasi
           
    **11. Forming JWT token**
-        Go to https://jwt.io/#debugger-io website in brower.
-        add following json content in Header part
+        Click on [Generate JWT token](https://jwt.io/#debugger-io) website in brower.
+     
+   add following json content in Header part
          
               {
               "typ": "JWT",
                "alg": "HS256"
               }     
-       add following json content in Payload part
+   add following json content in Payload part
         
       
      {
