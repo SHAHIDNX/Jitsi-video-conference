@@ -1,7 +1,7 @@
 ** Following is the procedure to install Jitsi with JWT authentications. I have used Ubuntu 18.4 bionic, recommendation is try it in a new machine.**
 1. Update ubuntu packages after fresh installation.
   $sudo apt update
-2. Setup hostname  
+2. Setup ho**stname  
     sudo hostnamectl set-hostname meet
   
   add the same name in /etc/hosts
