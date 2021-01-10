@@ -9,7 +9,9 @@
     sudo hostnamectl set-hostname meet
   
   add the same name in /etc/hosts
-     x.x.x.x meet.example.org
+    
+    x.x.x.x meet.example.org
+    
   Where x.x.x.x is your server's public IP address.
   
   Confirm you are able ping using hostname 
